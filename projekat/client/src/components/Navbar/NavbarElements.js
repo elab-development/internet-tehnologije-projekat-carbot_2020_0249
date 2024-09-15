@@ -77,6 +77,4 @@ export const HandleLogo = styled.div`
     font-family: Protest Guerrilla;
   }
 `;
-export const YellowColor = styled.span`
-  color: #f9f871;
-`;
+

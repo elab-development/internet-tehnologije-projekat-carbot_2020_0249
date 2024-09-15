@@ -26,7 +26,3 @@ export const StyledBtn = styled.button`
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #010606;`;
-
-export const YellowColor = styled.span`
-  color: #7CB9E8;
-`;

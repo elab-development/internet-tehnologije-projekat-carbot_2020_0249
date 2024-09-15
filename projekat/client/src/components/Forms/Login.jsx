@@ -1,4 +1,4 @@
-import logo from "../../assets/images/main.png"; // Uvoz slike logotipa
+import main from "../../assets/images/main.png"; // Uvoz slike logotipa
 import { StyledBtn } from "../../assets/styles/ButtonElements"; // Uvoz stilizovanog dugmeta
 import { useForm } from "react-hook-form"; // Uvoz hook-a za rad sa formama
 import { Container, Wrapper } from "../../assets/styles"; // Uvoz stilizovanih komponenti za kontejner i obuhvat
@@ -98,7 +98,7 @@ export default function Login({ setisLoggedIn }) {
           </Footer>
         </div>
         <HandleImg> {/* Obuhvat za prikaz slike logotipa */}
-          <Logo  src={logo} /> {/* Prikaz logotipa */}
+          <Logo  src={main} /> {/* Prikaz logotipa */}
         </HandleImg>
       </Wrapper>
     </Container>

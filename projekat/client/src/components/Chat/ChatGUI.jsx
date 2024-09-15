@@ -28,11 +28,7 @@ export default function ChatGUI() { // Definišemo funkcionalnu komponentu ChatG
     const messageDetails = await Promise.all(
       response.data.messages.map(async (messageId) => { 
         // Za svaku poruku dohvaćamo njen detalj.
-        const messageResponse = await api.get(`/messages/${messageId}`, {
-          headers: {
-            "x-auth-token": token, // Ponovo šaljemo token za autorizaciju.
-          },
-        });
+        const messageResponse = await api.get(`/messages/${messageId}`);
         return messageResponse.data; // Vraćamo podatke o poruci.
       })
     );
