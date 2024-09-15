@@ -100,11 +100,20 @@ export default function ChatGUI() { // Definišemo funkcionalnu komponentu ChatG
   };
 
   const stopRecording = () => { 
-    // Funkcija za zaustavljanje snimanja.
     setIsRecording(false); // Postavljamo da snimanje nije aktivno.
     if (recognition) {
       recognition.stop(); // Zaustavljamo prepoznavanje govora.
     }
+  
+  // Resetovanje mikrofon permisije pomoću reload-a
+  navigator.mediaDevices.getUserMedia({ audio: true })
+    .then((stream) => {
+      stream.getTracks().forEach(track => track.stop()); // Prekinite sve audio streamove
+    })
+    .catch((err) => {
+      console.error('Failed to stop microphone', err);
+    });
+
   };
 
   return (
