@@ -45,7 +45,7 @@ async function createAdminUser() {
 
       // Kreiramo novog admin korisnika
       const adminUser = new User({
-        name: "ChatBot Admin",
+        name: "Car Bot Admin",
         email: adminEmail,
         password: hashedPassword,
         isAdmin: true, // Označavamo da je korisnik admin

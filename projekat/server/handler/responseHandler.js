@@ -34,7 +34,7 @@ const cleanCarModel = (model) => {
 };
 
 // Funkcija za dobijanje slike automobila sa Unsplash API-ja.
-const fetchCarImageFromUnsplash = async (carBrand, carModel) => {
+const fetchCarImageFromUnsplash = async (carBrand) => {
   try {
     // Modifikujemo upit kako bismo uključili brend automobila.
     const searchQuery = `${carBrand} car`;
@@ -78,7 +78,7 @@ const get_response = async (message) => {
 
     // Korak 2: Obrada 'car_image' intent-a.
     if (intent === 'car_image' && carBrand) {
-      const imageUrl = await fetchCarImageFromUnsplash(carBrand, carModel);
+      const imageUrl = await fetchCarImageFromUnsplash(carBrand);
       if (imageUrl) {
         // Vraćamo HTML img tag sa slikom automobila.
         return `<img src="${imageUrl}" alt="${carBrand} car" style="max-width:100%; height:auto;">`;
@@ -106,7 +106,7 @@ const get_response = async (message) => {
         }
 
         // Obrada 'car_info' ili 'car_description' intente-a (informacije o automobilu).
-        if (intent === 'car_info' || intent === 'car_description') {
+        if (intent === 'car_info') {
           return `The ${foundCar.brand} ${foundCar.model} is a ${foundCar.fuelType} car with ${foundCar.transmission} transmission. ${foundCar.about}`;
         }
       }

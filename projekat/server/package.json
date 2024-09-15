@@ -1,7 +1,7 @@
 {
   "name": "rulebased-chatbot",
   "version": "1.0.0",
-  "description": "A Rule-based chat bot using Google's WordsAPI",
+  "description": "A Rule-based chat bot using Wit.ai",
   "main": "index.js",
   "dependencies": {
     "@tensorflow/tfjs": "^4.21.0",

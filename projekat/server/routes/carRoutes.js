@@ -1,7 +1,7 @@
 const express = require('express'); 
 // Uvozimo Express biblioteku za pravljenje web servera i API ruta.
 
-const { getAllCars, insertCarData } = require('../controllers/carController'); 
+const { getAllCars } = require('../controllers/carController'); 
 // Uvozimo funkcije `getAllCars` i `insertCarData` iz kontrolera `carController`.
 // Ove funkcije će rukovati zahtevima vezanim za podatke o automobilima.
 
